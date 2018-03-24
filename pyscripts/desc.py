@@ -3,7 +3,8 @@
 #adapted from https://machinelearningmastery.com/understand-machine-learning-data-descriptive-statistics-python/
 #https://pandas.pydata.org/pandas-docs/stable/visualization.html
 #http://www.scipy-lectures.org/packages/scikit-learn/auto_examples/plot_iris_scatter.html
-
+#https://rstudio-pubs-static.s3.amazonaws.com/229050_116b97bac814449586325ff405417419.html
+#https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset
 
 import pandas
 url = "https://raw.githubusercontent.com/Osheah/project/master/data/iris.csv?token=AiEuthVKeloCkMeFSmPeZBQ6oCblwRnRks5avOiwwA%3D%3D"

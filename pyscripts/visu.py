@@ -1,5 +1,8 @@
 #visualisations of the Iris Data Set
 #https://www.kaggle.com/benhamner/python-data-visualizations
+#https://seaborn.pydata.org/generated/seaborn.pairplot.html
+#https://seaborn.pydata.org/generated/seaborn.PairGrid.html
+
 #import packages
 # import pandas for data processing
 import pandas as pd
