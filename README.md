@@ -2,17 +2,24 @@
 # Fishing Fisher's Flower Figures - An analysis of Fisher's Iris Dataset 
 # Abstract
 # Introduction
-The iris data set, also known as Fisher's iris data set, was popularised by the statisician Ronald Fisher in 1936 [Reference link](https://en.wikipedia.org/wiki/Iris_flower_data_set). It consists of 50 samples from three different species of the Iris flower, iris setosa ![iris setosa picture](img/setosa.jpg), iris virginica ![iris virginica picture](img/virginica.jpg) and iris versicolor ![iris versicolor](img/versicolor.jpg). Fisher measured the length and width of the iris's petals and sepals, in centimeters then analysed the data to investigate if these measurments alone could identify the species of iris. 
+The iris data set, also known as Fisher's iris data set, was popularised by the statisician Ronald Fisher in 1936 [Reference link](https://en.wikipedia.org/wiki/Iris_flower_data_set). It is a small dataset from 1936, consisting of 50 samples from three different species of the Iris flower, iris setosa ![iris setosa picture](img/setosa.jpg), iris virginica ![iris virginica picture](img/virginica.jpg) and iris versicolor ![iris versicolor](img/versicolor.jpg). Fisher measured the length and width of the iris's petals and sepals, in centimeters then analysed the data to investigate if these measurments alone could identify the species of iris. 
 
-The iris data set is a useful and insightfull sample in which to apply data analysis. Historically, it is an early example of statistics applied to real data. The data set was collect and analysed by Roland Fisher, a famous biologist and statistian. The data set is small, 150 entries yet is sufficient to illustrate several areas where analysing data is insightful. Fisher's analysis showed two main clusters, with the iris setosa being clearly different from the other two. This seperation into two groups is an example of unsupervised clustering where the data is unlabled. If the samples are labled then three cluster group emerge, illustrating supervised clustering. [reference](https://en.wikipedia.org/wiki/Cluster_analysis). 
+The iris data set is a useful and insightfull sample in which to apply data analysis. Its use in exploring machine learning algorithms and in data visualization is well documented. Historically, it is an early example of statistics applied to real data. The data set was collect and analysed by Roland Fisher, a famous biologist and statistian. The data set is small, 150 entries yet is sufficient to illustrate several areas where analysing data is insightful. Fisher's analysis showed two main clusters, with the iris setosa being clearly different from the other two. This seperation into two groups is an example of unsupervised clustering where the data is unlabled. If the samples are labled then three cluster group emerge, illustrating supervised clustering. [reference](https://en.wikipedia.org/wiki/Cluster_analysis). 
 
 maybe add a bit on python and analysis 
 # Method 
-things to compute for sepal/petal length and width
+This project uses Python 3 and the libraries pandas, matplotlib seaborn and sklearn. It produces descriptive statistics of the data including the sepal/petal length and width
 * max 
 * min
 * mean 
 
+in addition inferential statistics are produced with 
+* variance
+* standard deviation
+* skewness
+* Kurtosis 
+
+This project also produces data visualizations, including scatter plot, box plot etc.....
 
 
 ## Design
@@ -38,5 +45,9 @@ discuss the findings maybe a discussion of cluster analysis data mining unstruct
 [link](https://archive.ics.uci.edu/ml/datasets/iris)
 
 [](https://www.kaggle.com/sridharcr/data-analysis-iris-dataset)
+[](https://www.kaggle.com/benhamner/python-data-visualizations)
+
+[](http://scikit-learn.org/stable/tutorial/basic/tutorial.html)
 []()
+
 # Appendices 
