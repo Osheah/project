@@ -1,57 +1,113 @@
+#visualisations of the Iris Data Set
 #https://www.kaggle.com/benhamner/python-data-visualizations
-
-'''# Load the data
-from sklearn.datasets import load_iris
-iris = load_iris()
-#iris=pandas.read_csv(url)
-from matplotlib import pyplot as plt
-#peek = iris.head(10)
-# The indices of the features that we are plotting
-x_index = 0
-y_index = 1
-
-# this formatter will label the colorbar with the correct target names
-formatter = plt.FuncFormatter(lambda i, *args: iris.target_names[int(i)])
-
-plt.figure(figsize=(5, 4))
-plt.scatter(iris.data[:, x_index], iris.data[:, y_index], c=iris.target)
-plt.colorbar(ticks=[0, 1, 2], format=formatter)
-plt.xlabel(iris.feature_names[x_index])
-plt.ylabel(iris.feature_names[y_index])
-
-plt.tight_layout()
-plt.show()
-
-
-#iris.plot(kind="scatter", x="SepalLengthCm", y="SepalWidthCm")'''
-# First, we'll import pandas, a data processing and CSV file I/O library
+#import packages
+# import pandas for data processing
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
-ts.plot()
-plt.show()
-# We'll also import seaborn, a Python graphing library
-import warnings # current version of seaborn generates a bunch of warnings that we'll ignore
-warnings.filterwarnings("ignore")
+# import seaborn for graphs
+#import warnings # current version of seaborn generates a bunch of warnings that we'll ignore
+#warnings.filterwarnings("ignore")
 import seaborn as sns
-import matplotlib.pyplot as plt
 sns.set(style="white", color_codes=True)
-
-# Next, we'll load the Iris flower dataset, which is in the 
+#Load Data
 url = "https://raw.githubusercontent.com/Osheah/project/master/data/iris.csv?token=AiEuthVKeloCkMeFSmPeZBQ6oCblwRnRks5avOiwwA%3D%3D"
 names = ['SepalL', 'SepalW', 'PetalL', 'PetalW', 'Species']
 iris = pd.read_csv(url, names=names)
-# the iris dataset is now a Pandas DataFrame
 
-# Let's see what's in the iris data - Jupyter notebooks print the result of the last thing you do
+# View Data 
+print(iris.head(10))
+# View number of each species
+print(iris["Species"].value_counts())
 
-#print(iris.head(10))
-
-# Press shift+enter to execute this cell
-# Let's see how many examples we have of each species
-#print(iris["Species"].value_counts())
-# The first way we can plot things is using the .plot extension from Pandas dataframes
-# We'll use this to make a scatterplot of the Iris features.
+# scatterplot data
+#1
 iris.plot(kind="scatter", x="SepalL", y="SepalW")
 plt.show()
+iris.plot(kind="scatter", x="PetalL", y="PetalW")
+plt.show()
+
+#2
+sns.jointplot(x="SepalL", y="SepalW", data=iris, size=5)
+plt.show()
+sns.jointplot(x="PetalL", y="PetalW", data=iris, size=5)
+plt.show()
+#3
+sns.FacetGrid(iris, hue="Species", size=5) \
+   .map(plt.scatter, "SepalL", "SepalW") \
+   .add_legend()
+plt.show()
+sns.FacetGrid(iris, hue="Species", size=5) \
+   .map(plt.scatter, "PetalL", "PetalW") \
+   .add_legend()   
+plt.show()
+#4
+sns.boxplot(x="Species", y="PetalL", data=iris) 
+plt.show()
+sns.boxplot(x="Species", y="PetalW", data=iris) 
+plt.show()
+sns.boxplot(x="Species", y="SepalL", data=iris) 
+plt.show()
+sns.boxplot(x="Species", y="SepalW", data=iris) 
+plt.show()
+#5
+ax = sns.boxplot(x="Species", y="PetalL", data=iris)
+ax = sns.stripplot(x="Species", y="PetalL", data=iris, jitter=True, edgecolor="gray") 
+plt.show()
+ax = sns.boxplot(x="Species", y="PetalW", data=iris)
+ax = sns.stripplot(x="Species", y="PetalW", data=iris, jitter=True, edgecolor="gray") 
+plt.show()
+ax = sns.boxplot(x="Species", y="SepalL", data=iris)
+ax = sns.stripplot(x="Species", y="SepalL", data=iris, jitter=True, edgecolor="gray")
+plt.show() 
+ax = sns.boxplot(x="Species", y="SepalW", data=iris)
+ax = sns.stripplot(x="Species", y="SepalW", data=iris, jitter=True, edgecolor="gray") 
+plt.show()
+#6
+sns.violinplot(x="Species", y="PetalL", data=iris, size=6)
+plt.show()
+sns.violinplot(x="Species", y="PetalW", data=iris, size=6)
+plt.show()
+sns.violinplot(x="Species", y="SepalL", data=iris, size=6)
+plt.show()
+sns.violinplot(x="Species", y="SepalW", data=iris, size=6)
+plt.show()
+
+#7
+sns.FacetGrid(iris, hue="Species", size=6) \
+   .map(sns.kdeplot, "PetalL") \
+   .add_legend()
+plt.show()
+sns.FacetGrid(iris, hue="Species", size=6) \
+   .map(sns.kdeplot, "PetalW") \
+   .add_legend()
+plt.show()
+sns.FacetGrid(iris, hue="Species", size=6) \
+   .map(sns.kdeplot, "SepalL") \
+   .add_legend()
+plt.show()
+sns.FacetGrid(iris, hue="Species", size=6) \
+   .map(sns.kdeplot, "SepalW") \
+   .add_legend()
+plt.show()
+#8
+g = sns.pairplot(iris, hue="Species")
+plt.show()
+g = sns.pairplot(iris, hue="Species", diag_kind="kde")
+plt.show()
+
+#9
+from pandas.tools.plotting import andrews_curves
+andrews_curves(iris, "Species")
+plt.show()
+
+#10
+from pandas.plotting import parallel_coordinates
+parallel_coordinates(iris, "Species")
+plt.show()
+
+#11
+from pandas.plotting import radviz
+radviz(iris, "Species")
+plt.show()
+
