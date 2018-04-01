@@ -4,32 +4,31 @@
 #https://seaborn.pydata.org/generated/seaborn.PairGrid.html
 
 #import packages
-# import pandas for data processing
+# import pandas for data frame
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-# import seaborn for graphs
-#import warnings # current version of seaborn generates a bunch of warnings that we'll ignore
-#warnings.filterwarnings("ignore")
-import seaborn as sns
+import numpy as np # import numpy for use with matplotlib and seaborn
+import matplotlib.pyplot as plt # import for graphs
+import seaborn as sns # import seaborn for graphs
 sns.set(style="white", color_codes=True)
 #Load Data
 url = "../data/iris.csv"
-names = ['SepalL', 'SepalW', 'PetalL', 'PetalW', 'Species']
+names = ['sepalL', 'sepalW', 'petalL', 'petalW', 'name']
 iris = pd.read_csv(url, names=names)
 
 # View Data 
-print(iris.head(10))
+print(iris.head(10)) # check data loaded and view headers
 # View number of each species
-print(iris["Species"].value_counts())
+print(iris["name"].value_counts()) # check counts
 
 # scatterplot data
 #1
-iris.plot(kind="scatter", x="SepalL", y="SepalW")
+plt.scatter(iris.sepalL, iris.sepalW, s=100, c=iris.name)
 plt.show()
-iris.plot(kind="scatter", x="PetalL", y="PetalW")
+'''
+#1
+iris.plot(kind="scatter", x="sepalL", y="sepalW")
+iris.plot(kind="scatter", x="PetalL", y="petalW")
 plt.show()
-
 #2
 sns.jointplot(x="SepalL", y="SepalW", data=iris, size=5)
 plt.show()
@@ -113,4 +112,4 @@ plt.show()
 from pandas.plotting import radviz
 radviz(iris, "Species")
 plt.show()
-
+'''

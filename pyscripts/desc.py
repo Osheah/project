@@ -57,6 +57,7 @@ print("the pearson correlations are", "\r\n", correlations)
 skew = iris.skew()
 print("The skew is: ","\r\n", skew)
 
+dont really need this so delete it
 print("All measurments are in cm")
 print("The maximum sepal length is  ", description['sepalL'][7], "cm" )
 print("The maximum sepal width is  ", description['sepalW'][7], "cm" )

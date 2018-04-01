@@ -9,7 +9,7 @@ from sklearn.feature_selection import chi2
 
 # Load iris data
 iris = load_iris()
-open iris
+with open 
 '''
 # Create features and target
 X = iris.data
