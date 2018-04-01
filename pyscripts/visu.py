@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(style="white", color_codes=True)
 #Load Data
-url = "https://raw.githubusercontent.com/Osheah/project/master/data/iris.csv?token=AiEuthVKeloCkMeFSmPeZBQ6oCblwRnRks5avOiwwA%3D%3D"
+url = "../data/iris.csv"
 names = ['SepalL', 'SepalW', 'PetalL', 'PetalW', 'Species']
 iris = pd.read_csv(url, names=names)
 
