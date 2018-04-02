@@ -1,6 +1,5 @@
-#Helen O'Shea 22/03/2018 3
-
-#adapted from https://machinelearningmastery.com/understand-machine-learning-data-descriptive-statistics-python/
+#Helen O'Shea 22/03/2018 
+#code adapted from https://machinelearningmastery.com/understand-machine-learning-data-descriptive-statistics-python/
 #https://pandas.pydata.org/pandas-docs/stable/visualization.html
 #http://www.scipy-lectures.org/packages/scikit-learn/auto_examples/plot_iris_scatter.html
 #https://rstudio-pubs-static.s3.amazonaws.com/229050_116b97bac814449586325ff405417419.html

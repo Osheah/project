@@ -1,4 +1,5 @@
-# adapted from https://stackoverflow.com/questions/21568451/using-chi-squared-test-for-feature-selection
+#Helen O'Shea 22/03/2018 
+# code adapted from https://stackoverflow.com/questions/21568451/using-chi-squared-test-for-feature-selection
 
 # Load libraries
 import numpy
