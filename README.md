@@ -2,7 +2,8 @@
 # Fishing Fisher's Flower Figures - An exploration of the Iris Dataset - update
 
 ## Helen O’Shea
-## Galway Mayo Institute of Technology - Data Analytics - Programming and Scripting ## Date: April 2018
+## Galway Mayo Institute of Technology - Data Analytics - Programming and Scripting
+## Date: April 2018
 ## The Iris Data and Data Analytics
 ### Background
 The Iris data set, also known as Fisher or Anderson’s Iris flower data set, was popularised by the statistician Ronald Fisher in his 1936 paper [“The use of multiple measurements in taxonomic problems”](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x). It was collected by the American botanist, Edgar Anderson in 1935 yet remained unpublished till Fisher published his paper which used this data set. Anderson’s data consists of fifty samples each, from the three species of Iris, Iris setosa, Iris virginica and Iris versicolor. Two of the species, Iris virginica and Iris setosa, were sampled from the same region and used by Fisher to illustrate discriminant functions. In addition Fisher extended this method to investigate Randolph’s hypothesis that the third species, Iris versicolor, was a hybrid of the Iris virginica and setosa species (ibid). Anderson recorded species type and measured the length and width of their petals and sepals in centimetres. The petals are the inner flower while the sepals are the outer structures as seen here 
@@ -31,10 +32,12 @@ Fisher’s analysis investigated if petal/sepal measurements alone could predict
 ## Folders
 
 This project consists of subfolders containing 
-1. images
-2. data
-3. python scripts
-4. graphics
+1. images [/img/](/img/)
+2. data [/data/](/data/)
+3. python scripts [/pyscripts/](/pyscripts/)
+4. graphics [/graphs/](/graphs/)
+5. research [/research/](/research/)
+6. and the project write up project report.docx or project report.pdf
 
 ### Images
 Images of the flowers can be found in the folder named [img](/img/) 
