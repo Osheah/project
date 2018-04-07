@@ -60,7 +60,7 @@ The python scripts are found [here](/pyscripts/) in the folder pyscripts
 * nn.py was to contain some code on machine learning - but not really relevent for data analysis so maybe drop it. 
 
 ### Visualisations
-The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below.
+The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below and availabe in folder [graphs](/graphs/).
 * Andrews Curves
 	* andrewscs.jpg
 * Box Plots 
