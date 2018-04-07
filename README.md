@@ -11,7 +11,7 @@ The Iris data set, also known as Fisher or Anderson’s Iris flower data set, wa
  
 You can see images of the various Iris species used in Fisher's Data Set below.
 
-![Iris Setosa](/img/setosa[220].jpg), 
+![Iris Setosa](/img/setosa[220].jpg) 
 Iris Setosa
 
 
@@ -84,6 +84,6 @@ Rad
 This [folder](/research/) contains some papers used to research the project. 
 
 ### Project Report
-The full write up of the project can be found [in word format here](/project report.docx) and in [pdf format here] (/project report.pdf). 
+The full write up of the project can be found [in word format here](project%20report.docx) and [in pdf format here] (project%20report.pdf). 
 
 
