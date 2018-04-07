@@ -12,10 +12,15 @@ The Iris data set, also known as Fisher or Anderson’s Iris flower data set, wa
 You can see images of the various Iris species used in Fisher's Data Set below.
 
 ![Iris Setosa](/img/setosa[220].jpg), 
+Iris Setosa
+
 
 ![Iris Versicolor](/img/versicolor.jpg) 
+Iris Versicolor
+
 
 ![Iris Virginica](/img/virginica.jpg) 
+Iris Virginica
 
 This gives the data set five dimensions,  namely 4 one dimensional measures in centimetres, sepal length (sepalL), sepal width (sepalW), petal length (petalL),  petal width (petalW); And one categorical dimension of Iris species (name). This project used the version of the Iris data hosted at [UCI machine learning repository](http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data)This version contains [two errors](https://www.researchgate.net/profile/Ludmila_Kuncheva/publication/3335819_Will_the_real_Iris_data_please_stand_up/links/55d66ff908ae9d65948bdb42/Will-the-real-Iris-data-please-stand-up.pdf) from Anderson’s original data which were not amended in the analysis.
 
@@ -79,6 +84,6 @@ Rad
 This [folder](/research/) contains some papers used to research the project. 
 
 ### Project Report
-The full write up of the project can be found [in word format here](project report.docx) and in [pdf format here] (project report.pdf). 
+The full write up of the project can be found [in word format here](/project report.docx) and in [pdf format here] (/project report.pdf). 
 
 
