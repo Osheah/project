@@ -22,53 +22,81 @@ print(types)#view the data types
 '''
 select the data by species name 
 '''
-iris_se = iris['name'] == 'Iris-setosa' # select the iris setosa data
-print(iris[iris_se].head(50)) # print all of the setosa data
-iris_vi = iris['name'] == 'Iris-virginica' # select  the iris virginica data
-print(iris[iris_vi].head(50))# print all the virginica data
-iris_ve = iris['name'] == 'Iris-versicolor' # select the iris versicolor data
-print(iris[iris_ve].head(50)) # print all the versicolor data
+
+setosa=iris[(iris['name'] == 'Iris-setosa')] # select the iris setosa data
+print(setosa.head(50)) # print all of the setosa data
+versicolor=iris[(iris['name'] == 'Iris-versicolor')] # select  the iris versicolor data
+print(versicolor.head(50)) # print all the versicolor data
+virginica=iris[(iris['name'] == 'Iris-virginica')] # select the iris virginica data
+print(versicolor.head(50)) # print all the virginica data
 
 
-''' get data description of the iris categories'''
+'''look at the ratios of length/width'''
+#---------setosa----------------------
+#sepal
+s_s_ratio=setosa['sepalL']/setosa['sepalW']
+print(s_s_ratio, "/n")
+s_s_desc = s_s_ratio.describe()
+print("the setosa sepal ratio descriptions are ", "\r\n", s_s_desc)
+s_s_desc.to_csv("../data/s_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+s_p_ratio=setosa['petalL']/setosa['petalW']
+print(s_p_ratio, "/n")
+s_p_desc = s_p_ratio.describe()
+print("the setosa petal ratio descriptions are ", "\r\n", s_p_desc)
+s_p_desc.to_csv("../data/s_p_desc.csv", sep='\t')
+
+#---------versicolor----------------------
+#sepal
+ve_s_ratio=versicolor['sepalL']/versicolor['sepalW']
+print(ve_s_ratio, "/n")
+ve_s_desc = ve_s_ratio.describe()
+print("the versicolor sepal ratio descriptions are", "\r\n", ve_s_desc)
+ve_s_desc.to_csv("../data/ve_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+ve_p_ratio=versicolor['petalL']/versicolor['petalW']
+print(ve_p_ratio, "/n")
+ve_p_desc = ve_p_ratio.describe()
+print("the versicolor petal ratio descriptions are ", "\r\n", ve_p_desc)
+ve_p_desc.to_csv("../data/ve_p_desc.csv", sep='\t')
+
+#---------virginica----------------------
+#sepal
+vi_s_ratio=virginica['sepalL']/virginica['sepalW']
+print(vi_s_ratio, "/n")
+vi_s_desc = vi_s_ratio.describe()
+print("the virginica sepal ratio descriptions are ", "\r\n", vi_s_desc)
+vi_s_desc.to_csv("../data/vi_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+vi_p_ratio=virginica['petalL']/virginica['petalW']
+print(vi_p_ratio, "/n")
+vi_p_desc = vi_p_ratio.describe()
+print("the virginica petal ratio descriptions are", "\r\n", vi_p_desc)
+vi_p_desc.to_csv("../data/vi_p_desc.csv", sep='\t')
+
+''' get data description of the iris species'''
+
 # set table up
 pd.set_option('display.width', 100) 
 pd.set_option('precision', 3) # display stats to 3 dp
+
 # Setosa description and saved results
-desc_se = iris[iris_se].describe() # use pandas describe to calcualte descriptive statistics
+desc_se = setosa.describe() # use pandas describe to calcualte descriptive statistics
 print("\r\n", "The descriptive statistics of the Iris Setosa Data is listed below", "\r\n", desc_se)
 desc_se.to_csv("../data/desc_se.csv", sep='\t') # save the table in /data/ as desc_se.csv
 # Virginica description and saved results
-desc_vi = iris[iris_vi].describe() # use pandas describe to calcualte descriptive statistics
+desc_vi = virginica.describe() # use pandas describe to calcualte descriptive statistics
 print("\r\n", "The descriptive statistics of the Iris Virginica Data is listed below", "\r\n", desc_vi)
 desc_vi.to_csv("../data/desc_vi.csv", sep='\t') # save the table in /data/ as desc_vi.csv
 #Versicolor description and saved results
-desc_ve = iris[iris_ve].describe() # use pandas describe to calcualte descriptive statistics
+desc_ve = versicolor.describe() # use pandas describe to calcualte descriptive statistics
 print("\r\n", "The descriptive statistics of the Iris Versicolor Data is listed below", "\r\n", desc_ve)
 desc_ve.to_csv("../data/desc_ve.csv", sep='\t') # save the table in /data/ as desc_ve.csv
 description = iris.describe()
 print ("\r\n", "The descriptive statistics of the Iris Data is listed below", "\r\n", description)
 description.to_csv("../data/description.csv", sep='\t') # save the table in /data/ as descriptioncla.csv
 
-'''
-correlations = iris.corr(method='pearson')
-print("the pearson correlations are", "\r\n", correlations)
-skew = iris.skew()
-print("The skew is: ","\r\n", skew)
 
-dont really need this so delete it
-print("All measurments are in cm")
-print("The maximum sepal length is  ", description['sepalL'][7], "cm" )
-print("The maximum sepal width is  ", description['sepalW'][7], "cm" )
-print("The maximum petal length is  ", description['petalL'][7], "cm" )
-print("The maximum petal width is  ", description['petalW'][7], "cm" )
-print("The minimum sepal length is  ", description['sepalL'][3], "cm" )
-print("The minimum sepal width is  ", description['sepalW'][3], "cm" )
-print("The minimum petal length is  ", description['petalL'][3], "cm" )
-print("The minimum petal width is  ", description['petalL'][3], "cm" )
-print("The mean sepal length is  ", round(description['sepalL'][1], 3), "cm" )
-print("The mean sepal width is  ", round(description['sepalW'][1],3), "cm" )
-print("The mean petal length is  ", round(description['petalL'][1], 3), "cm" )
-print("The mean petal width is  ", round(description['petalL'][1], 3), "cm" )
-'''
+
+
 

@@ -5,6 +5,7 @@ from scipy import stats
 import matplotlib.pyplot as plt
 
 
+
 # Load iris data
 url = "../data/iris.csv" # location of data 
 names = ['sepalL', 'sepalW', 'petalL', 'petalW', 'name'] # add the names of the headings
@@ -55,3 +56,45 @@ print(welch_ttest(setosa['petalL'], versicolor['petalL']))'''
 
 print("The t-test between the Setosa and Virginica petal length is ", stats.ttest_ind(setosa['petalL'], virginica['petalL'], equal_var=False))
 print(welch_ttest(setosa['petalL'], virginica['petalL']))
+
+#---------setosa----------------------
+#sepal
+s_s_ratio=setosa['sepalL']/setosa['sepalW']
+print(s_s_ratio, "/n")
+s_s_desc = s_s_ratio.describe()
+print(s_s_desc)
+s_s_desc.to_csv("../data/s_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+s_p_ratio=setosa['pepalL']/setosa['pepalW']
+print(s_p_ratio, "/n")
+s_p_desc = s_p_ratio.describe()
+print(s_p_desc)
+s_p_desc.to_csv("../data/s_p_desc.csv", sep='\t')
+
+#---------versicolor----------------------
+#sepal
+ve_s_ratio=versicolor['sepalL']/versicolor['sepalW']
+print(ve_s_ratio, "/n")
+ve_s_desc = ve_s_ratio.describe()
+print(ve_s_desc)
+ve_s_desc.to_csv("../data/ve_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+ve_p_ratio=versicolor['pepalL']/versicolor['pepalW']
+print(ve_p_ratio, "/n")
+ve_p_desc = ve_p_ratio.describe()
+print(ve_p_desc)
+ve_p_desc.to_csv("../data/ve_p_desc.csv", sep='\t')
+
+#---------virginica----------------------
+#sepal
+vi_s_ratio=virginica['sepalL']/virginica['sepalW']
+print(vi_s_ratio, "/n")
+vi_s_desc = vi_s_ratio.describe()
+print(vi_s_desc)
+vi_s_desc.to_csv("../data/vi_s_desc.csv", sep='\t') # save the file to data folder
+#petal
+vi_p_ratio=virginica['pepalL']/virginica['pepalW']
+print(vi_p_ratio, "/n")
+vi_p_desc = vi_p_ratio.describe()
+print(vi_p_desc)
+vi_p_desc.to_csv("../data/vi_p_desc.csv", sep='\t')

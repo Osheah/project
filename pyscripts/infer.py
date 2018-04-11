@@ -232,7 +232,7 @@ print("The standard deviation of the versicolor Sepal Length is ", round(np.std(
 # Alternative hypothesis (HA): u1 ≠ u2, ie the mean of the setosa sepal lengths is different from the mean of the virginica sepal lengths as the come from different populations
 print("The levene test for between the Setosa and Virginca sepal lengths is ", stats.levene(setosa['sepalL'], virginica['sepalL']))
 #(statistic=11.454002162818494, pvalue=0.0010271363228426178)
-# test significant as p>0.05
+# test significant as p<0.05
 
 #check if sepal width look normally distributed - setosa done already
 virginica['sepalL'].plot(kind="hist", title= "Virginica Sepal Length", color="red")
@@ -398,7 +398,7 @@ print("The Levene test for petal Lengths of versicolor and virginica is ", stats
 # test significant as p<0.05
 #other tests done already - versicolor not significant for Sharpio Wilk test
 #do welsch t test
-print("The t test between the petal widths of Versicolor and Virginica is ", stats.ttest_ind(versicolor['petalW'], virginica['petalW'], equal_var=false))
+print("The t test between the petal widths of Versicolor and Virginica is ", stats.ttest_ind(versicolor['petalW'], virginica['petalW'], equal_var= False))
 # Ttest_indResult(statistic=-14.625367047410148, pvalue=2.1115344009885731e-25)
 # do welsh t test
 print(welch_ttest(versicolor['petalW'], virginica['petalW']))
@@ -409,7 +409,7 @@ print("The standard deviation of the Versicolor petal width is ", round(np.std(v
 print("The mean of the Virginica Petal Width is ",round(np.mean(virginica['petalW']),3))#2.026
 print("The standard deviation of the Virginica Petal Width is ", round(np.std(virginica['petalW']),3))#0.272
 
-#This tested if there is a significant difference in petal widths between the Iris versicolor and Iris virginica. The Iris versicolor's average petal width (M=1.326 , SD=0.196) is smaller and has less variation than Iris-virginica (M=2.026 , SD=0.272). Levene’s test for homogeneity of variances was significant (F=6.546, p=0.012); therefore Welch's t-test was used. Results showed a significant difference in sepal widths between Iris-setosa and Iris-virginica (t(89.043)=-14.625, p<0.05).
+#This tested if there is a significant difference in petal widths between the Iris versicolor and Iris virginica. The Iris versicolor's average petal width (M=1.326 , SD=0.196) is smaller and has less variation than Iris-virginica (M=2.026 , SD=0.272). Levene’s test for homogeneity of variances was significant (F=6.546, p=0.012); therefore Welch's t-test was used. Results showed a significant difference in petal widths between Iris-versicolor and Iris-virginica (t(89.043)=-14.625, p<0.05).
 
 # do the same for petal lengths
 
@@ -460,7 +460,7 @@ print("The Shapiro Wilk test for the Versicolor Petal Length is ", stats.shapiro
 # p>0.05 so not significant 
 
 #do t test
-print(stats.ttest_ind(setosa['petalL'], versicolor['petalL'], equal_val= False))
+print(stats.ttest_ind(setosa['petalL'], versicolor['petalL'], equal_var= False))
 #Ttest_indResult(statistic=-39.468662593972709, pvalue=1.057210030060334e-45)
 #  p<0.05. 
 #Do Welch's t-test
@@ -471,7 +471,7 @@ print("The standard deviation of the Setosa Petal Length is ", round(np.std(seto
 print("The mean of the versicolor Petal Length is ",round(np.mean(versicolor['petalL']),3))#4.26
 print("The standard deviation of the versicolor petal Length is ", round(np.std(versicolor['petalL']),3))#0.465
 
-#This tested if there is a significant difference in petal widths between the Iris setosa and Iris versicolor. The Iris setosa’s average petal width (M=1.464 , SD=0.172 ) is wider and has greater variation than Iris-versicolor (M=4.26, SD=0.465 ). Levene’s test for homogeneity of variances was significant (F=30.897 , p=2.348); therefore an Independent t-test was used. Results showed a significant difference in petal widths between Iris-setosa and Iris-versicolor (t(62.118)=-39.469, p<0.05).
+#This tested if there is a significant difference in petal lengths between the Iris setosa and Iris versicolor. The Iris setosa’s average petal lengths (M=1.464 , SD=0.172 ) is smaller and has less variation than Iris-versicolor (M=4.26, SD=0.465 ). Levene’s test for homogeneity of variances was significant (F=30.897 , p=2.348); therefore an Independent t-test was used. Results showed a significant difference in petal lengths between Iris-setosa and Iris-versicolor (t(62.118)=-39.469, p<0.05).
 
 # now compare setosa lengths to virginica lengths 
 #-- Setosa vs Virginica-------------
@@ -536,4 +536,4 @@ print("The standard deviation of the Versicolor petal length is ", round(np.std(
 print("The mean of the Virginica Petal length is ",round(np.mean(virginica['petalL']),3))#5.552
 print("The standard deviation of the Virginica Petal length is ", round(np.std(virginica['petalL']),3))#0.546
 
-#This tested if there is a significant difference in petal lengths between the Iris versicolor and Iris virginica. The Iris versicolor's average sepal width (M=4.26 , SD=0.465 ) is smaller and has less variation than Iris-virginica (M=5.552 , SD=0.546). Levene’s test for homogeneity of variances indicated equality of variance (F=1.067 , p=0.304); therefore an Independent t-test was used. Results showed a significant difference in sepal widths between Iris-setosa and Iris-virginica (t(98)=,29.023 p=6.428).
+#This tested if there is a significant difference in petal lengths between the Iris versicolor and Iris virginica. The Iris versicolor's average petal length (M=4.26 , SD=0.465 ) is smaller and has less variation than Iris-virginica (M=5.552 , SD=0.546). Levene’s test for homogeneity of variances indicated equality of variance (F=1.067 , p=0.304); therefore an Independent t-test was used. Results showed a significant difference in petal lengths between Iris-versicolor and Iris-virginica (t(98)=,29.023 p=6.428).

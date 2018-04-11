@@ -49,6 +49,12 @@ A csv file of the Iris Data Set can be found in the folder here, (/data/iris.csv
 * desc_ve.csv contains the descriptive results from the Iris Versicolor
 * desc_vi.csv contains the descriptive results from the Iris Virginica
 * description.csv contains the descriptive results from all 3 Iris species
+* s_p_desc.csv contains the descriptive results of the length to width ratio of the setosa petals
+* s_s_desc.csv contains the descriptive results of the length to width ratio of the setosa sepals
+* ve_p_desc.csv contains the descriptive results of the length to width ratio of the versicolor petals
+* ve_s_desc.csv contains the descriptive results of the length to width ratio of the versicolor sepals
+* vi_p_desc.csv contains the descriptive results of the length to width ratio of the virginica petals
+* vi_p_desc.csv contains the descriptive results of the length to width ratio of the virginica sepals
 
 
 ### Python Scripts
@@ -87,21 +93,14 @@ The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below 
 * Rad
   * rad.jpg - add desc in later
 * QQ Plots - add desc in later
-  * setosa_qqplot.jpg  - delete this one
-  * setosaL_qqplot.jpg - and this
-  * setosaW_qqplot.jpg - add this
   * setosaPL_qqplot.jpg
   * setosaPW_qqplot.jpg
   * setosaSL_qqplot.jpg
   * setosaSW_qqplot.jpg
-  * versicolor_qqplot.jpg
-  * versicolorL_qqplot.jpg
   * versicolorPL_qqplot.jpg
   * versicolorPW_qqplot.jpg
   * versicolorSL_qqplot.jpg
   * versicolorSW_qqplot.jpg
-  * virginica_qqplot.jpg
-  * virginicaL_qqplot.jpg
   * virginiaPL_qqplot.jpg
   * virginicaPW_qqplot.jpg
   * virginicaSL_qqplot.jpg

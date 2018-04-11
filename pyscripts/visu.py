@@ -30,8 +30,9 @@ plt.savefig("../graphs/spsepal.jpg")# save fig before show or else it saves as b
 #plt.show() # maybe remove this after testing
 
 iris.plot(kind="scatter", x="petalL", y="petalW")
-plt.savefig("../graphs/ppsepal.jpg")
+plt.savefig("../graphs/sppetal.jpg")
 #plt.show()
+
 
 
 #2 similar scatter plot but with corralation seaborn
