@@ -17,84 +17,34 @@ versicolor=iris[(iris['name'] == 'Iris-versicolor')]
 virginica=iris[(iris['name'] == 'Iris-virginica')]
 #print("The t-test for a relationship between Setosa and Versicolor Sepal Widths is:", stats.ttest_ind(setosa['sepalW'], versicolor['sepalW']))
 #Ttest_indResult(statistic=9.2827725555581111, pvalue=4.3622390160102143e-15) p<0.05 so signifant there for reject null hypothesis H0 for HA that the populations are different. 
-'''
-print("The mean of the Setosa Sepal Width is ",round(np.mean(setosa['sepalW']),3))
-print("The standard deviation of the Setosa Sepal Width is ", round(np.std(setosa['sepalW']),3))
 
-print("The mean of the versicolor Sepal Width is ",round(np.mean(versicolor['sepalW']),3))
-print("The standard deviation of the versicolor Sepal Width is ", round(np.std(versicolor['sepalW']),3))
+# test the setosa petal widths with the outliers removed
+# how to remove outliers
+# how to identify outliers
+#adapted from http://colingorrie.github.io/outlier-detection.html
+#Outlier detection
 
-print("The t test between the setosa and versicolor sepal widths is ", stats.ttest_ind(setosa['sepalW'], versicolor['sepalW']))
+def outliers_iqr(ys):
+    quartile_1, quartile_3 = np.percentile(ys, [25, 75])
+    iqr = quartile_3 - quartile_1
+    lower_bound = quartile_1 - (iqr * 1.5)
+    upper_bound = quartile_3 + (iqr * 1.5)
+    return np.where((ys > upper_bound) | (ys < lower_bound))
 
-print("The t-test between the sepal lengths of the Setosa and Versicolor is ", stats.ttest_ind(setosa['sepalL'], versicolor['sepalL'], equal_var=False))
-'''
-#----- Welch t test---------------
-# define welch t test to get deg of freedom and p
-#code taken from https://pythonfordatascience.org/welch-t-test-python-pandas/
-def welch_ttest(x, y): 
-    ## Welch-Satterthwaite Degrees of Freedom ##
-    dof = (x.var()/x.size + y.var()/y.size)**2 / ((x.var()/x.size)**2 / (x.size-1) + (y.var()/y.size)**2 / (y.size-1))
-   
-    t, p = stats.ttest_ind(x, y, equal_var = False)
-    
-    print("\n",
-          f"Welch's t-test= {t:.4f}", ", ",
-          f"p-value = {p:.4f}", ", ",
-          f"Welch-Satterthwaite Degrees of Freedom= {dof:.4f}")
-#call the function
-'''
-print(welch_ttest(setosa['sepalL'], versicolor['sepalL']))
+print('The outliers as identifed by iqr are:' , '\n\r', outliers_iqr(setosa['petalW']))
+print(setosa['petalW'][23])
+print(setosa['petalW'][43])
+#print(setosa)
 
-print("The t-test between the sepal lengths of the Setosa and Virginica is ", stats.ttest_ind(setosa['sepalL'], virginica['sepalL'], equal_var=False))
-print(welch_ttest(setosa['sepalL'], virginica['sepalL']))
-print("The Levene test for Sepal Lengths of versicolor and virginica is ", stats.levene(versicolor['sepalL'], virginica['sepalL']))
+#z score petal width of 0.6 looks enough to modify as 0.6 is much different from the other scores replace 0.6 with mean of petal width and check for normal distribution. 
+#get mean petal widths for setosa
+print(np.average(setosa['petalW']))
+# change value 
+#osetosa = setosa['petalW'].replace([0.5],2.44)
+osetosa=(setosa['petalW']).replace([setosa['petalW'][23], setosa['petalW'][43]],.244)
+plt.hist((setosa['petalW']).replace([setosa['petalW'][23], setosa['petalW'][43]],.244))
+plt.show()
+#looks normalish
+# test for normality
+print("The Shapiro Wilk test for the Setosa Petal Width with iqr outliers replaced by means is ", stats.shapiro(osetosa))
 
-print("The t test between the petal widths of Versicolor and Virginica is ", stats.ttest_ind(versicolor['petalW'], virginica['petalW'], equal_var= False))
-print(welch_ttest(versicolor['petalW'], virginica['petalW']))
-print(stats.ttest_ind(setosa['petalL'], versicolor['petalL'], equal_var= False))
-print(welch_ttest(setosa['petalL'], versicolor['petalL']))'''
-
-print("The t-test between the Setosa and Virginica petal length is ", stats.ttest_ind(setosa['petalL'], virginica['petalL'], equal_var=False))
-print(welch_ttest(setosa['petalL'], virginica['petalL']))
-
-#---------setosa----------------------
-#sepal
-s_s_ratio=setosa['sepalL']/setosa['sepalW']
-print(s_s_ratio, "/n")
-s_s_desc = s_s_ratio.describe()
-print(s_s_desc)
-s_s_desc.to_csv("../data/s_s_desc.csv", sep='\t') # save the file to data folder
-#petal
-s_p_ratio=setosa['pepalL']/setosa['pepalW']
-print(s_p_ratio, "/n")
-s_p_desc = s_p_ratio.describe()
-print(s_p_desc)
-s_p_desc.to_csv("../data/s_p_desc.csv", sep='\t')
-
-#---------versicolor----------------------
-#sepal
-ve_s_ratio=versicolor['sepalL']/versicolor['sepalW']
-print(ve_s_ratio, "/n")
-ve_s_desc = ve_s_ratio.describe()
-print(ve_s_desc)
-ve_s_desc.to_csv("../data/ve_s_desc.csv", sep='\t') # save the file to data folder
-#petal
-ve_p_ratio=versicolor['pepalL']/versicolor['pepalW']
-print(ve_p_ratio, "/n")
-ve_p_desc = ve_p_ratio.describe()
-print(ve_p_desc)
-ve_p_desc.to_csv("../data/ve_p_desc.csv", sep='\t')
-
-#---------virginica----------------------
-#sepal
-vi_s_ratio=virginica['sepalL']/virginica['sepalW']
-print(vi_s_ratio, "/n")
-vi_s_desc = vi_s_ratio.describe()
-print(vi_s_desc)
-vi_s_desc.to_csv("../data/vi_s_desc.csv", sep='\t') # save the file to data folder
-#petal
-vi_p_ratio=virginica['pepalL']/virginica['pepalW']
-print(vi_p_ratio, "/n")
-vi_p_desc = vi_p_ratio.describe()
-print(vi_p_desc)
-vi_p_desc.to_csv("../data/vi_p_desc.csv", sep='\t')
