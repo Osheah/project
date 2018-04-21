@@ -38,7 +38,7 @@ print(setosa['petalW'][43])
 
 #z score petal width of 0.6 looks enough to modify as 0.6 is much different from the other scores replace 0.6 with mean of petal width and check for normal distribution. 
 #get mean petal widths for setosa
-print(np.average(setosa['petalW']))
+'''print(np.average(setosa['petalW']))
 # change value 
 #osetosa = setosa['petalW'].replace([0.5],2.44)
 osetosa=(setosa['petalW']).replace([setosa['petalW'][23], setosa['petalW'][43]],.244)
@@ -47,4 +47,10 @@ plt.show()
 #looks normalish
 # test for normality
 print("The Shapiro Wilk test for the Setosa Petal Width with iqr outliers replaced by means is ", stats.shapiro(osetosa))
+# still not normal why? other methods of outlier identification/ errors in the data from uci
+#(0.8138638734817505, 1.8573789475340163e-06)
+#print('the skewness of the setosa sepal width is', setosa['sepalW'].skew())'''
 
+iris.plot(kind="scatter", )
+plt.savefig("../graphs/siris.jpg")
+plt.show()

@@ -1,5 +1,5 @@
 #Helen O'Shea 22/03/2018 
-# code adapted from https://pythonfordatascience.org/independent-t-test-python/
+# code adapted and expanded from https://pythonfordatascience.org/independent-t-test-python/
 
 # Load libraries
 import pandas as pd
@@ -8,7 +8,7 @@ from scipy import stats
 import matplotlib.pyplot as plt
 
 
-# Load iris data
+# Load iris data and separate out by species name
 url = "../data/iris.csv" # location of data 
 names = ['sepalL', 'sepalW', 'petalL', 'petalW', 'name'] # add the names of the headings
 iris = pd.read_csv(url, names=names) # imports the data from the local data folder  and gives it the headings listed in names
@@ -536,4 +536,4 @@ print("The standard deviation of the Versicolor petal length is ", round(np.std(
 print("The mean of the Virginica Petal length is ",round(np.mean(virginica['petalL']),3))#5.552
 print("The standard deviation of the Virginica Petal length is ", round(np.std(virginica['petalL']),3))#0.546
 
-#This tested if there is a significant difference in petal lengths between the Iris versicolor and Iris virginica. The Iris versicolor's average petal length (M=4.26 , SD=0.465 ) is smaller and has less variation than Iris-virginica (M=5.552 , SD=0.546). Levene’s test for homogeneity of variances indicated equality of variance (F=1.067 , p=0.304); therefore an Independent t-test was used. Results showed a significant difference in petal lengths between Iris-versicolor and Iris-virginica (t(98)=,29.023 p=6.428).
+#This tested if there is a significant difference in petal lengths between the Iris versicolor and Iris virginica. The Iris versicolor's average petal length (M=4.26 , SD=0.465 ) is smaller and has less variation than Iris-virginica (M=5.552 , SD=0.546). Levene’s test for homogeneity of variances indicated equality of variance (F=1.067 , p=0.304); therefore an Independent t-test was used. Results showed a significant difference in petal lengths between Iris-versicolor and Iris-virginica (t(98)=,29.023 p=6.428e-50).
