@@ -1,3 +1,7 @@
+# Helen O'Shea 22/03/2018 
+# This is code samples to run and test various peices of code used in other files. It can be ignored.  
+
+
 # Load libraries
 import pandas as pd
 import numpy as np

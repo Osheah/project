@@ -4,6 +4,9 @@
 #http://www.scipy-lectures.org/packages/scikit-learn/auto_examples/plot_iris_scatter.html
 #https://www.kaggle.com/benhamner/python-data-visualizations
 
+# This file contains the code used to generate discriptive statistics for the Iris Data set. 
+
+
 # Import the packages
 import pandas as pd # use pandas to import the csv 
 url = "../data/iris.csv" # location of data 
@@ -99,8 +102,3 @@ desc_ve.to_csv("../data/desc_ve.csv", sep='\t') # save the table in /data/ as de
 description = iris.describe()
 print ("\r\n", "The descriptive statistics of the Iris Data is listed below", "\r\n", description)
 description.to_csv("../data/description.csv", sep='\t') # save the table in /data/ as descriptioncla.csv
-
-
-
-
-

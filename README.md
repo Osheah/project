@@ -43,6 +43,11 @@ This project consists of subfolders containing
 
 ### Images
 Images of the flowers can be found in the folder named [img](/img/) 
+* icon_iris.png picture illustrating sepal and petals in Iris Versicolor
+* setosa.jpg - picture of iris setosa 
+* setosa[220].jpg picture of resized iris setosa
+* versicolor.jpg picture of iris versicolor
+* virginica.jpg picture of iris virginica
 
 ### CSV files
 
@@ -57,82 +62,101 @@ A csv file of the Iris Data Set can be found in the folder here, (/data/iris.csv
 * ve_s_desc.csv contains the descriptive results of the length to width ratio of the versicolor sepals
 * vi_p_desc.csv contains the descriptive results of the length to width ratio of the virginica petals
 * vi_p_desc.csv contains the descriptive results of the length to width ratio of the virginica sepals
-
+* iris.csv contains the iris data downloaded from [uci](http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data)
 
 ### Python Scripts
 The python scripts are found [here](/pyscripts/) in the folder pyscripts
 * desc.py contains the code to calculate descriptive statistics for the 3 Iris species
 * infer.py contains the code to calculate inferential statistics (t-tests or Welch's t-test depending on the indpendence of the variances under investigation)
 * visu.py contains the code to visualise the data, results of which are saved in the [folder graphs](/graphs/)
-* test.py contains code extracts for testing purposes
-* nn.py was to contain some code on machine learning - but not really relevent for data analysis so maybe drop it. 
+* test.py contains code extracts for rough work and testing purposes and is not relevent to the final project.
+
 
 ### Visualisations
 The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below and availabe in folder [graphs](/graphs/).
 * Andrews Curves
 	* andrewscs.jpg
 * Box Plots 
-	* bp2petalL.jpg
-	* bp2petalW.jpg
-	* bp2sepalL.jpg
-	* bp2sepalW.jpg
-	* bppetalL.jpg
-	* bppetalW.jpg
-	* bpsepalL.jpg
-	* bpsepalW.jpg
+	* bp2petalL.jpg box plot of petal lengths with sample overlay
+	* bp2petalW.jpg box plot of petal widths with sample overlay
+	* bp2sepalL.jpg box plot of sepal lengths with sample overlay
+	* bp2sepalW.jpg box plot of sepal widths with sample overlay
+	* bppetalL.jpg box plot of petal lengths
+	* bppetalW.jpg box plot of petal widths
+	* bpsepalL.jpg box plot of sepal lengths
+	* bpsepalW.jpg box plot of sepal widths
+* Histograms of Iris data broken down by category 
+  * hSPL.jpg Histogram of setosa petal lengths
+  * hSPW.jpg Histogram of setosa petal widths
+  * hSSL.jpg Histogram of setosa sepal lengths
+  * hSSW.jpg Histogram of setosa sepal widths
+  * hVePL.jpg Histogram of versicolor petal lengths
+  * hVePW.jpg Histogram of versicolor petal widths
+  * hVeSL.jpg Histogram of versicolor sepal lengths
+  * hVeSW.jpg Histogram of versicolor sepal widths
+  * hViPL.jpg Histogram of virginica petal lengths
+  * hViPW.jpg Histogram of virginica petal widths
+  * hViSL.jpg Histogram of virginica sepal lengths
+  * hViSW.jpg Histogram of virginica sepal widthss
+* Histogram of Full Iris   
+ * iPL.jpg Histogram of Iris data petal lengths
+ * iPW.jpg Histogram of Iris data petal widths
+ * iSL.jpg Histogram of Iris data sepal lengths
+ * iSW.jpg Histogram of Iris data sepal widths
 * KDE Kernel Desnity Estimation graphs
-  * kdepetalL.jpg
-  * kdepetalW.jpg
-  * kdesepalL.jpg
-  * kdesepalW.jpg
+  * kdepetalL.jpg kde plot of petal lengths
+  * kdepetalW.jpg kde plot of petal widths
+  * kdesepalL.jpg kde plot of sepal lengths
+  * kdesepalW.jpg kde plot of sepal widths
 * Pair Plots
-  * histogram along diagonal
-   * pairploth.jpg
+  * histogram along diagonal 
+   * pairploth.jpg pair plot with histogram along the diagonals
   * kde curve along diagonal
-   * pairplotk.jpg  
+   * pairplotk.jpg  pair plot with kde plot along the diagonals
 * Parallel Coordiante Curve
-  * parac.jpg
-* Rad
-  * rad.jpg - add desc in later
+  * parac.jpg parallel coordiantes plot of iris data
+* Radvis plot
+  * rad.jpg - Radviz plot of iris data
 * QQ Plots - add desc in later
-  * setosaPL_qqplot.jpg
-  * setosaPW_qqplot.jpg
-  * setosaSL_qqplot.jpg
-  * setosaSW_qqplot.jpg
-  * versicolorPL_qqplot.jpg
-  * versicolorPW_qqplot.jpg
-  * versicolorSL_qqplot.jpg
-  * versicolorSW_qqplot.jpg
-  * virginiaPL_qqplot.jpg
-  * virginicaPW_qqplot.jpg
-  * virginicaSL_qqplot.jpg
-  * virginicaSW_qqplot.jpg
-* Red line thingy test for normality
-  * setosapetalL.jpg
-  * setosapetalW.jpg
-  * setosasepalL.jpg
-  * setosasepalW.jpg
-  * versicolorpetalL.jpg
-  * versicolorpetalW.jpg
-  * versicolorsepalL.jpg
-  * versicolorsepalW.jpg
-  * virginicapetalL.jpg
-  * virginicapetalW.jpg
-  * virginicasepalL.jpg
-  * virginicasepalW.jpg
+  * setosaPL_qqplot.jpg qq plot of setosa petal lengths
+  * setosaPW_qqplot.jpg qq plot of setosa petal widths
+  * setosaSL_qqplot.jpg qq plot of setosa sepal lengths
+  * setosaSW_qqplot.jpg qq plot of setosa sepal widths
+  * versicolorPL_qqplot.jpg qq plot of versicolor petal lengths
+  * versicolorPW_qqplot.jpg qq plot of versicolor petal widths
+  * versicolorSL_qqplot.jpg qq plot of versicolor sepal lengths
+  * versicolorSW_qqplot.jpg qq plot of versicolor sepal widths
+  * virginiaPL_qqplot.jpg qq plot of virginica petal lengths
+  * virginicaPW_qqplot.jpg qq plot of virginica petal widths
+  * virginicaSL_qqplot.jpg qq plot of virginica sepal lengths
+  * virginicaSW_qqplot.jpg qq plot of virginica sepal widths
+* Histograms with axis labels
+  * setosapetalL.jpg histogram of setosa petal length 
+  * setosapetalW.jpg histogram of setosa petal width
+  * setosasepalL.jpg histogram of setosa sepal length 
+  * setosasepalW.jpg histogram of setosa sepal width
+  * versicolorpetalL.jpg histogram of versicolor petal length
+  * versicolorpetalW.jpg histogram of versicolor petal length
+  * versicolorsepalL.jpg histogram of versicolor sepal length
+  * versicolorsepalW.jpg histogram of versicolor sepal width
+  * virginicapetalL.jpg histogram of virginica petal length
+  * virginicapetalW.jpg histogram of virginica petal width
+  * virginicasepalL.jpg histogram of virginica sepal length
+  * virginicasepalW.jpg histogram of virginica petal width
 * Scatter plots
   * Labelled
-    * snpetal2.jpg
-    * snsepal2.jpg
+    * snpetal2.jpg catogory labeled scatter plot of iris petal data
+    * snsepal2.jpg catogory labled scatter plot of iris data sepal data
   * Unlabelled
-    * snpetal.jpg - seaborn
-    * snsepal.jpg
-    * spsepal.jpg - pandas
+    * snpetal.jpg - seaborn scattor plot of unlabelled iris petal data with pearsons r. 
+    * snsepal.jpg - seaborn scatter plot of unlabelled iris sepal data with persons r. 
+    * sppetal.jpg - pandas scatter plot of unlabelled iris petal data
+    * spsepal.jpg - pandas scatter plot of unlabeled sepal data
 * Violin Plots
-  * vppetalL.jpg
-  * vppetalW.jpg
-  * vpsepalL.jpg
-  * vpsepalW.jpg	
+  * vppetalL.jpg violin plot of petal lengths
+  * vppetalW.jpg violin plot of petal widths
+  * vpsepalL.jpg violin plot of sepal lengths
+  * vpsepalW.jpg violin plot of sepal widths
 
 ### Research 
 This [folder](/research/) contains some papers used to research the project. 
