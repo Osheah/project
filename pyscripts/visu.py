@@ -16,6 +16,12 @@ sns.set(style="white", color_codes=True)
 url = "../data/iris.csv"
 names = ['sepalL', 'sepalW', 'petalL', 'petalW', 'name']
 iris = pd.read_csv(url, names=names) # use same naming convention as in desc.py
+# split data by group
+iris.groupby("name")["sepalL"].describe()
+setosa=iris[(iris['name'] == 'Iris-setosa')]
+versicolor=iris[(iris['name'] == 'Iris-versicolor')]
+virginica=iris[(iris['name'] == 'Iris-virginica')]
+
 # View Data 
 print(iris.head(10)) # check data loaded and view headers - can remove this later
 # View number of each species

@@ -16,15 +16,15 @@ peek = iris.head(10) # looks at the headers and first 10 items
 print(peek) # prints the headers and first 10 items to check data imported correctly.
 with pd.option_context('display.max_rows', None, 'display.max_columns', 6): # use pandas to print the full data 6 col wide - one for col id and 5 for dimensions
 #print(iris) # print out the complete data set
-shape = iris.shape # get an idea of the dimension of the data 150 samples 5 dimensions
+  shape = iris.shape # get an idea of the dimension of the data 150 samples 5 dimensions
 print(shape)# print the shape 
 iris.info # general information about the data
 types = iris.dtypes # type of data 4 floats - the length and widths of petals and sepals and 1 object of iris species name 
 print(types)#view the data types
 
-'''
-select the data by species name - group and split the data by name 
-'''
+
+#select the data by species name - group and split the data by name 
+
 
 setosa=iris[(iris['name'] == 'Iris-setosa')] # select the iris setosa data only
 print(setosa.head(50)) # print all of the setosa data as a check 
@@ -34,7 +34,7 @@ virginica=iris[(iris['name'] == 'Iris-virginica')] # select the iris virginica d
 print(versicolor.head(50)) # print all the virginica data only as a check
 
 
-'''look at the ratios of length/width'''
+#look at the ratios of length/width
 #---------setosa----------------------
 #sepal 
 s_s_ratio=setosa['sepalL']/setosa['sepalW'] 
@@ -77,7 +77,7 @@ vi_p_desc = vi_p_ratio.describe()
 print("the virginica petal ratio descriptions are", "\r\n", vi_p_desc)
 vi_p_desc.to_csv("../data/vi_p_desc.csv", sep='\t')
 
-''' get data description of the iris species'''
+#get data description of the iris species#
 
 # set table up
 pd.set_option('display.width', 100) 

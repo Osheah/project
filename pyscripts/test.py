@@ -58,3 +58,6 @@ print("The Shapiro Wilk test for the Setosa Petal Width with iqr outliers replac
 iris.plot(kind="scatter", )
 plt.savefig("../graphs/siris.jpg")
 plt.show()
+
+shape = iris.shape # get an idea of the dimension of the data 150 samples 5 dimensions
+print (shape)
