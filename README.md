@@ -97,7 +97,7 @@ The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below 
   * hViPL.jpg Histogram of virginica petal lengths
   * hViPW.jpg Histogram of virginica petal widths
   * hViSL.jpg Histogram of virginica sepal lengths
-  * hViSW.jpg Histogram of virginica sepal widthss
+  * hViSW.jpg Histogram of virginica sepal widths
 * Histogram of Full Iris   
  * iPL.jpg Histogram of Iris data petal lengths
  * iPW.jpg Histogram of Iris data petal widths
@@ -131,18 +131,18 @@ The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below 
   * virginicaSL_qqplot.jpg qq plot of virginica sepal lengths
   * virginicaSW_qqplot.jpg qq plot of virginica sepal widths
 * Histograms with axis labels
-  * setosapetalL.jpg histogram of setosa petal length 
-  * setosapetalW.jpg histogram of setosa petal width
-  * setosasepalL.jpg histogram of setosa sepal length 
-  * setosasepalW.jpg histogram of setosa sepal width
-  * versicolorpetalL.jpg histogram of versicolor petal length
-  * versicolorpetalW.jpg histogram of versicolor petal length
-  * versicolorsepalL.jpg histogram of versicolor sepal length
-  * versicolorsepalW.jpg histogram of versicolor sepal width
+  * setosapetalL.jpg histogram of setosa petal lengths 
+  * setosapetalW.jpg histogram of setosa petal widths
+  * setosasepalL.jpg histogram of setosa sepal lengths 
+  * setosasepalW.jpg histogram of setosa sepal widths
+  * versicolorpetalL.jpg histogram of versicolor petal lengths
+  * versicolorpetalW.jpg histogram of versicolor petal lengths
+  * versicolorsepalL.jpg histogram of versicolor sepal lengths
+  * versicolorsepalW.jpg histogram of versicolor sepal widths
   * virginicapetalL.jpg histogram of virginica petal length
-  * virginicapetalW.jpg histogram of virginica petal width
-  * virginicasepalL.jpg histogram of virginica sepal length
-  * virginicasepalW.jpg histogram of virginica petal width
+  * virginicapetalW.jpg histogram of virginica petal widths
+  * virginicasepalL.jpg histogram of virginica sepal lengths
+  * virginicasepalW.jpg histogram of virginica petal widths
 * Scatter plots
   * Labelled
     * snpetal2.jpg catogory labeled scatter plot of iris petal data
