@@ -18,9 +18,9 @@ names = ['sepalL', 'sepalW', 'petalL', 'petalW', 'name']
 iris = pd.read_csv(url, names=names) # use same naming convention as in desc.py
 # split data by group
 iris.groupby("name")["sepalL"].describe()
-setosa=iris[(iris['name'] == 'Iris-setosa')]
-versicolor=iris[(iris['name'] == 'Iris-versicolor')]
-virginica=iris[(iris['name'] == 'Iris-virginica')]
+setosa=iris[(iris['name'] == 'Iris-setosa')] # setosa samples
+versicolor=iris[(iris['name'] == 'Iris-versicolor')] # versicolor samples
+virginica=iris[(iris['name'] == 'Iris-virginica')] # virginica samples
 
 # View Data 
 print(iris.head(10)) # check data loaded and view headers - can remove this later

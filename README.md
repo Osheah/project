@@ -160,8 +160,9 @@ The visualisations produced from [visu.py](/pyscripts/visu.py) are listed below 
 
 ### Research 
 This [folder](/research/) contains some papers used to research the project. 
+Code used and adapted is referenced at the top of the relevent .py script
 
 ### Project Report
-The full write up of the project can be found [in word format here](project%20report.docx) and [in pdf format here](project%20report.pdf). 
+The full write up of the project can be found [in word format here](project%20report.docx) and [in pdf format here](project%20report.pdf). Pdf version included in case graphs and tables are missaligned in word when accessed. 
 
 
